@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Prism by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Prism by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<section>
+						<h2>How to prepare your temperature tower in Cura 3</h2>
+					</section>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2 alt">
+				<div class="inner">
+					<div class="spotlight">
+						<div class="image">
+							<img src="cura1.png" alt="" />
+						</div>
+						<div class="content">
+							<h3>Step 1</h3>
+							<p>Open up the <a href="https://www.thingiverse.com/thing:2729076">temperature tower STl file</a>, change whatever settings you want, set temperature to the one from the first (bottom) part of tower and click Prepare button</p>
+						</div>
+                    </div>
+					<div class="spotlight">
+						<div class="content">
+							<h3>Step 2</h3>
+							<p>Change view to the layer view</p>
+						</div>
+						<div class="image">
+							<img src="cura2.png" alt="" />
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img src="cura3-1.png" alt="" />
+                            <div class="split">
+                                <section><h4 style="text-align: center">Layer 56</h4><img src="cura3-2.png" alt=""></section>
+                                <section style="margin-left:5%;margin-right:5%"><h4 style="text-align: center">Layer 57</h4><img src="cura3-3.png" alt=""></section>
+                                <section><h4 style="text-align: center">Layer 58</h4><img src="cura3-4.png" alt=""></section>
+                            </div>
+						</div>
+						<div class="content">
+							<h3>Step 3</h3>
+							<p style="margin-bottom:1em">Now you need to check, on which layer the first part of tower ends.</p>
+                            <p style="margin-bottom:1em">To do this, zoom to the 3D model and use scroll on the left to find out what layer number is the last.</p>
+                            <p style="margin-bottom:1em">In this tower it's easy:<br />you should just look for changes on left side of the tower.</p>
+                            <p style="margin-bottom:1em">Look at the screenshots on the left: layer 56 and 57 differs in that spot, while 57 and 58 doesn't.</p>
+                            <p style="margin-bottom:1em">This means that the last layer of first part is layer 57.</p>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="content" style="width:100%;text-align:center">
+							<h3>Step 4</h3>
+							<p style="margin-bottom:1em">Now do the third step for the second part. If you're not sure, I already checked that and the second part of the temp tower ends on layer 107.</p>
+                            <p style="margin-bottom:1em">After this we can subtract first number from this number.</p>
+                            <p style="margin-bottom:3em">Now we know the step between all the next parts - next one will end on 157, next on 207...</p>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="content">
+							<h3>Step 5</h3>
+							<p>Open Modify G-Code window</p>
+						</div>
+						<div class="image">
+							<img src="cura5.png" alt="" />
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img src="cura6.png" alt="" />
+						</div>
+						<div class="content">
+							<h3>Step 6</h3>
+							<p>Add a script named ChangeAtZ</p>
+						</div>
+                    </div>
+					<div class="spotlight">
+						<div class="content">
+							<h3>Step 7</h3>
+							<p>Changer trigger to Layer No.</p>
+						</div>
+						<div class="image">
+							<img src="cura7.png" alt="" />
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img src="cura8.png" alt="" />
+						</div>
+						<div class="content">
+							<h3>Step 8</h3>
+							<p>Change layer number to end of the first part (57 in our case)</p>
+						</div>
+                    </div>
+					<div class="spotlight">
+						<div class="content">
+							<h3>Step 9</h3>
+							<p>Tick "Change Extruder 1 Temp" checkbox and type temperature you want to get in second part of tower</p>
+						</div>
+						<div class="image">
+							<img src="cura9.png" alt="" />
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="content" style="width:100%;text-align:center">
+							<h3>Step 10</h3>
+							<p style="margin-bottom:3em">Now repeat steps 6-9 for all the next parts of tower (107, 157, 207...) and after that close the window, click prepare in Cura and you're good to go :)</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					&copy; Jakub Kuczys. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+
+	</body>
+</html>
